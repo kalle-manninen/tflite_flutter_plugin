@@ -69,7 +69,7 @@ typedef _TfLiteTensorName_native_t = Pointer<Utf8> Function(
 /*TfLiteStatus*/
 int Function(
   Pointer<TfLiteTensor> tensor,
-  Pointer<Void> inputData,
+  Pointer<NativeType> inputData,
   int inputDataSize,
 ) tfLiteTensorCopyFromBuffer = tflitelib
     .lookup<NativeFunction<_TfLiteTensorCopyFromBuffer_native_t>>(
@@ -78,7 +78,7 @@ int Function(
 
 typedef _TfLiteTensorCopyFromBuffer_native_t = /*TfLiteStatus*/ Int32 Function(
   Pointer<TfLiteTensor> tensor,
-  Pointer<Void> inputData,
+  Pointer<NativeType> inputData,
   Int32 inputDataSize,
 );
 
